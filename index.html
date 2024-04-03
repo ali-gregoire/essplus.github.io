@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entête et Diaporama avec Bootstrap</title>
+  <!-- Liens vers Bootstrap et Font Awesome -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+  <style>
+    /* Styles pour l'en-tête */
+    .header {
+      background-color: orange;
+      padding: 10px;
+    }
+    .header ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .header ul li {
+      display: inline-block;
+      margin-right: 20px;
+    }
+
+    /* Styles pour le menu */
+    .menu-section {
+      background-color: red;
+      padding: 10px;
+    }
+    .menu-section .navbar-brand {
+      margin-right: auto;
+    }
+    .menu-section .navbar-nav {
+      margin-left: auto;
+    }
+    .nav-item a:hover{
+      color: #007bff;
+    }
+    .navbar-brand span{
+    color:#000;
+}
+   .navbar-brand {
+    font-size: 30px;
+    font-weight: 900px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+   }
+    /* Styles pour le diaporama */
+    .slideshow {
+      width: 100%;
+      height: 497px;
+      position: relative;
+      overflow: hidden;
+    }
+    .slide {
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+    .slide.active {
+      opacity: 1;
+    }
+    .slide-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: #fff;
+    }
+    .slide-content h2 {
+      font-size: 30px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .slide-content p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    .slide-content .btn {
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+    .slide-content .btn:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- En-tête -->
+  <header class="header">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <ul>
+            <li><i class="fas fa-building"></i> +228 70-44-81-06</li>
+            <li><i class="far fa-envelope"></i> gregoire8@gmail.com</li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <ul class="social-icons">
+            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Menu -->
+  <nav class="navbar navbar-expand-lg navbar-dark menu-section">
+    <div class="container">
+      <a class="navbar-brand" href=""><i class="fas fa-handshake"></i> <span>E</span>sso-plus</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"><i class="fas fa-home"></i> L’Accueil</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="qui_somme_nous.html"><i class="fas fa-users"></i> Qui sommes-nous</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="nos_offres.html"><i class="fas fa-shopping-cart"></i> Nos Offres</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Diaporama -->
+  <div class="slideshow">
+    <div class="slide active" style="background-image: url('img/a3.jpg');">
+      <div class="slide-content">
+        <h2> Entretiens, Nettoyages, Jardinage</h2>
+        <p>Facilitation de recherche des agents d'entretient</p>
+        <a href="nos_offres.html" class="btn">Savoir plus</a>
+      </div>
+    </div>
+    <div class="slide" style="background-image: url('img/a4\ \(7\).jpg');">
+      <div class="slide-content">
+        <h2>EP Savonnerie</h2>
+        <p>Commender de meilleurs savons naturelle et parfumé</p>
+        <a href="nos_offres.html" class="btn">Savoir plus</a>
+    </div>
+      </div>
+    </div>
+  </div>
+  <!-- Texte supplémentaire -->
+<div class="additional-text" style="background-color: rgba(0, 0, 0, 0.5); padding: 20px;">
+    <div class="container">
+      <div class="row justify-content-center align-items-center">
+        <div class="col-md-8">
+          <h2 class="text-center" style="color: white;">Entretiens, Nettoyages, Jardinage (EPENJ)</h2>
+          <p class="text-center" style="color: white; font-size: 18px; line-height: 1.6;">
+            EPENJ est une société togolaise de nettoyage, d’entretien et de jardinage professionnelle qui intervient dans tous les secteurs d’activité. Elle propose des services de qualité adaptés aux besoins industriels de ses clients, tels que le nettoyage, l’entretien de bâtiments de bureaux, de maisons, le ménage à domicile, la désinfection et désinsectisation des lieux, ainsi que l’entretien des carreaux. De plus, elle offre des services d’entretien des espaces verts, fournissant des services professionnels et fiables pour transformer vos espaces en véritables œuvres d’art.
+          </p>
+          <h2 class="text-center" style="color: white;">Gardiennage Sécurité (EPGS)</h2>
+          <p class="text-center" style="color: white; font-size: 18px; line-height: 1.6;">
+            EPGS est une société privée de surveillance, d’investigation et de gardiennage qui a pour but de protéger de façon officiante les biens et les personnes de sa clientèle contre l’effraction, le vol, l’agression et tout autre risque. Elle s’occupe de la sécurité et de la protection des équipements bien mobiliers et immobiliers dans les espaces de vie ou de travail (maison, espace, entrepôt …) de toutes les formes du danger. EPGS est spécialisée aussi dans le gardiennage, la vidéo surveillance, le contrôle d’accès, le système anti-intrusion, le système anti-braquage, la protection incendie, la vente et recharge d’inspecteur, la géolocalisation des véhicules.
+          </p>
+          <h2 class="text-center" style="color: white;">Transport (EPT)</h2>
+          <p class="text-center" style="color: white; font-size: 18px; line-height: 1.6;">
+            EPT est une société de transport de personnes et de leurs biens. Également société de location, nous mettons à la disposition de notre aimable clientèle des bus climatisés et très confortables bien équipés pour vos différents voyages. De même pour les petits déplacements, la société EPT met à la disposition de son aimable clientèle les motos 2-roues et tricycles.
+          </p>
+          <h2 class="text-center" style="color: white;">EP Savonnerie</h2>
+          <p class="text-center" style="color: white; font-size: 18px; line-height: 1.6;">
+            EP Savonnerie est une société qui regroupe en son sein une usine de production de savon. Sa vocation première est la production du savon et de l’huile palmiste. L’objectif majeur qu’assigne l’entreprise ESSO-PLUS savonnerie est de proposer à la population des produits de qualité qui répondent efficacement aux besoins d’hygiène corporelle et vestimentaire à un coût accessible. Sa marque phare est « ESSO- PLUS ».
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <style>
+    /* Style pour la section des images */
+  .image-section {
+    margin-top: 50px;
+  }
+
+  .image-section .row {
+    margin-bottom: 30px;
+  }
+
+  .image-section img {
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .image-section img:hover {
+    transform: scale(1.05);
+  }
+
+  .image-section .info {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .image-section h3 {
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  .image-section p {
+    color: #666;
+    margin-bottom: 20px;
+  }
+
+  .image-section a {
+    color: #007bff;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  .image-section a:hover {
+    text-decoration: underline;
+  }
+
+  /* Ajout de l'espace entre les sections */
+  .section-spacing {
+    margin-top: 50px;
+  }
+  </style>
+  <!-- Nouvelle section -->
+<div class="container">
+    <!-- Première ligne d'images -->
+    <div class="row mb-4">
+      <div class="col-md-3">
+        <img src="img/a4 (10).jpg" alt="Image 1" class="img-fluid">
+        <div class="info">
+          <h3>Entretiens, Nettoyages, Jardinage</h3>
+          <p>EPENJ est une société togolaise de nettoyage, d’entretien et de jardinage professionnelle...</p>
+          <a href="nos_offres.html">En savoir plus <i class="fas fa-chevron-right"></i></a>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <img src="img/a11.jpg" alt="Image 2" class="img-fluid">
+        <div class="info">
+          <h3>Gardiennage Sécurité</h3>
+          <p>EPGS est une société privée de surveillance, d’investigation et de gardiennage...</p>
+          <a href="nos_offres.html">En savoir plus <i class="fas fa-chevron-right"></i></a>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <img src="img/a8.jpg" alt="Image 3" class="img-fluid">
+        <div class="info">
+          <h3>Transport</h3>
+          <p>EPT est une société de transport de personnes et de leurs biens...</p>
+          <a href="nos_offres.html">En savoir plus <i class="fas fa-chevron-right"></i></a>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <img src="img/a7.jpg" alt="Image 4" class="img-fluid">
+        <div class="info">
+          <h3>Savonnerie</h3>
+          <p>EP Savonnerie est une société qui regroupe en son sein une usine de production de savon. </p>
+          <a href="nos_offres.html">En savoir plus <i class="fas fa-chevron-right"></i></a>
+        </div>
+      </div>
+    </div>
+    <style>
+    .container {
+        margin-top: 50px;
+      }
+      .comment-form {
+        max-width: 500px;
+        margin: auto;
+        background-color: rgba(0, 0, 0, 0.1);;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px #fff;
+      }
+      .comment-form h2 {
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      .form-group label {
+        font-weight: bold;
+      }
+      .btn-primary {
+        background-color: #007bff;
+        border: none;
+      }
+      .btn-primary:hover {
+        background-color: #0056b3;
+      }
+    </style>
+
+    <!-- Formulaire de Commentaire -->
+<div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Laissez un commentaire</h2>
+        <form class="comment-form" action="traitement_commentaire.php" method="post">
+          <div class="form-group">
+            <label for="nom">Nom :</label>
+            <input type="text" class="form-control" id="nom" name="nom" required>
+          </div>
+          <div class="form-group">
+            <label for="email">E-mail :</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="commentaire">Commentaire :</label>
+            <textarea class="form-control" id="commentaire" name="commentaire" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Envoyer</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  
+  <footer class="footer bg-dark text-white py-4">
+    <div class="container">
+      <div class="row">
+        <!-- Logo et présentation de l'entreprise -->
+        <div class="col-md-4">
+          <h4><a class="navbar-brand" href=""><i class="fas fa-handshake"></i> <span>E</span>sso-plus</a></h4>
+          <p>Présentation de l'entreprise</p>
+        </div>
+        <!-- Localisation de l'entreprise -->
+        <div class="col-md-4">
+          <h4>Localisation</h4>
+          <p>Adresse de l'entreprise<br>
+          Division de l'entreprise</p>
+        </div>
+        <!-- Liens de raccourci du menu et plus d’information -->
+        <div class="col-md-4">
+          <h4>Liens rapides</h4>
+          <ul class="list-unstyled">
+            <li><a href="qui_somme_nous.html" class="text-white">Qui sommes-nous</a></li>
+            <li><a href="nos_offres.html" class="text-white">Nos Offres</a></li>
+            <li><a href="contact.html" class="text-white">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- Copyright -->
+    <div class="row mt-3">
+      <div class="col-12">
+        <p class="text-center m-0 copyright-text">Copyright 2024 <a href="#" class="text-white"> ESSO-PLUS</a> Tous droits réservés.</p>
+      </div>
+    </div>
+  </div>
+  <style>
+    .copyright-text {
+      font-size: 14px;
+      color: #ccc; /* Couleur différente de celle du texte principal */
+    }
+  </style>
+  
+  </footer>
+  
+  <!-- Les scripts Bootstrap et Font Awesome -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+  <script>
+    $(document).ready(function(){
+      $('.slideshow .slide').first().addClass('active'); // Ajoute la classe active au premier élément du diaporama
+  
+      // Fonction pour changer de diapositive toutes les 5 secondes
+      setInterval(function(){
+        var currentSlide = $('.slideshow .active');
+        var nextSlide = currentSlide.next();
+  
+        if(nextSlide.length === 0) {
+          nextSlide = $('.slideshow .slide').first(); // Retourne à la première diapositive si c'est la dernière
+        }
+  
+        currentSlide.removeClass('active');
+        nextSlide.addClass('active');
+      }, 5000); // Changement de diapositive toutes les 5 secondes
+    });
+  </script>
+  <script type="text/javascript">
+    window.addEventListener('scroll', function(){
+      const header =document.querySelector('header');
+      header.classList.toggle("sticky", window.scrollY > 0);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entête et Diaporama avec Bootstrap</title>
+  <!-- Liens vers Bootstrap et Font Awesome -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+
+<!-- Formulaire de Commentaire -->
+<div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Laissez un commentaire</h2>
+        <form class="comment-form" action="traitement_commentaire.php" method="post">
+          <div class="form-group">
+            <label for="nom">Nom :</label>
+            <input type="text" class="form-control" id="nom" name="nom" required>
+          </div>
+          <div class="form-group">
+            <label for="email">E-mail :</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="commentaire">Commentaire :</label>
+            <textarea class="form-control" id="commentaire" name="commentaire" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Envoyer</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .container {
+        margin-top: 50px;
+      }
+      .comment-form {
+        max-width: 500px;
+        margin: auto;
+        background-color: rgba(0,0,0,0.1);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px #fff;
+      }
+      .comment-form h2 {
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      .form-group label {
+        font-weight: bold;
+      }
+      .btn-primary {
+        background-color: #007bff;
+        border: none;
+      }
+      .btn-primary:hover {
+        background-color: #0056b3;
+      }
+    </style>
+
+    <!-- Les scripts Bootstrap et Font Awesome -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
